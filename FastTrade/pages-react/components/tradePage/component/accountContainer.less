@@ -1,0 +1,45 @@
+
+@import '../tradePage.less';
+
+.accountContainer{
+    width: 100%;
+    height: @accountContainer_height;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: @default_border;
+    .accountTitle{
+      width: 100%;
+      height: @default_lineheight;
+      background-color: @title_color;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      div{
+          display: flex;
+          flex: 1;
+          justify-content: center;
+          align-items: center;
+      }
+    //   padding-left: @default_padding;
+    }
+}
+
+.accountLine{
+    width: 100%;
+    height: @default_lineheight;
+    display: flex;
+}
+// .accountLine:hover{
+//     background-color: @tableItemHoverColor;
+// }
+.accountItem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.accountLineSelect{
+    background-color: @tableItemHoverColor;
+}

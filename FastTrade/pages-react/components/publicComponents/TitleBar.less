@@ -1,0 +1,142 @@
+.titleBarRootDiv{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 25px;
+  min-height: 25px;
+  z-index: 5555;
+}
+
+.titleBarDragDiv{
+  width: 100%;
+  height: 6px;
+  background-color:#2a3e5e;
+  -webkit-app-region: no-drag;
+}
+
+.titleBarItemDiv{
+  display: flex;
+  flex-direction: row;
+  height: 20px;
+  left: 0.5px;
+  right: 0.5px;
+  width: 100%;
+  background-color:#2a3e5e;
+  -webkit-app-region: drag;
+}
+
+.titleBarEmptyDiv{
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  align-items: center;
+}
+
+.titleBarCloseWinImg{
+  background-image: url("../../img/close_normal.png");
+  width: 13px;
+  height: 13px;
+  margin-right: 10px;
+  margin-left: 5px;
+  -webkit-app-region: no-drag;
+}
+
+.titleBarCloseMacImg{
+  background-image: url("../../img/close_normal.png");
+  width: 13px;
+  height: 13px;
+  margin-left: 10px;
+  -webkit-app-region: no-drag;
+}
+
+.titleBarCloseMacImg:hover{
+  background: url("../../img/close_hover.png");
+}
+
+.titleBarCloseWinImg:hover{
+  background: url("../../img/close_hover.png");
+}
+
+.titleBarMinImg{
+  background-image: url("../../img/min_normal.png");
+  width: 13px;
+  height: 13px;
+  margin-left: 5px;
+  -webkit-app-region: no-drag;
+}
+
+.titleBarMinImg:hover{
+  background: url("../../img/min_hover.png");
+}
+
+.titleBarMacMaxImg{
+  background-image: url("../../img/max_normal.png");
+  width: 13px;
+  height: 13px;
+  margin-left: 5px;
+  -webkit-app-region: no-drag;
+}
+
+.titleBarMacMaxImg:hover{
+  background: url("../../img/max_hover.png");
+}
+
+.titleBarWinMaxImg{
+  background-image: url("../../img/max_win_normal.png");
+  width: 13px;
+  height: 13px;
+  margin-left: 5px;
+  -webkit-app-region: no-drag;
+}
+
+.titleBarWinMaxImg:hover{
+  background: url("../../img/max_win_hover.png");
+}
+
+.titleBarInput{
+  min-width:100px;
+  width:25%;
+  background-color:rgba(38,46,62, 1);
+  color: white;
+  outline: none;
+  font-size: 14px;
+  border: solid 1px rgba(38,46,62, 1);
+  margin-bottom: 2px;
+  margin-left: 10px;
+  -webkit-app-region: no-drag;
+}
+
+.titleBarTitleArea{
+  display:flex;
+  flex:1;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.noDrag{
+  -webkit-app-region: no-drag;
+}
+
+.titleBarTitleInput{
+  text-align: center;
+  background-color: rgba(255,255,255,0.0);
+  color: white;
+  border: solid 0px white;
+  outline:none;
+}
+
+.ContextMenuContainer{
+  position:absolute;
+  width:0px;
+  height:0px;
+  background-color:rgba(255,255,255,0);
+  top:0px;
+  left:0px;
+  overflow:hidden;
+  display:flex;
+  z-index:199;
+}
+
+.ContextMenuContainer:focus{
+  outline:none;
+}

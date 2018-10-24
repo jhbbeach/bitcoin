@@ -1,0 +1,248 @@
+// @import './../../less/pubLess.less';
+
+//布局参数
+@titleContainer_height: 50px;
+@leftContainer_width: 500px;
+@accountContainer_height: 350px;
+@marketDataContainer_height: 500px;
+@default_lineheight: 30px;
+@default_padding: 10px;
+
+@title_color:#242f40;
+@default_border:solid 1px #242f40;
+// @default_border:solid 1px #181c26;
+@color2:#171d26;
+@color_hover:#0396ea;
+
+@tableItemDarkColor: #1d2934;//table深色行颜色
+@tableItemLightColor: #242f40;//table浅色行颜色
+@tableItemHoverColor: #2a3e5e;//table鼠标hover颜色
+@tableItemCheckColor: #3f5d8d;//table鼠标check颜色
+
+@red: #f51e2c;
+@redHover: rgba(245, 30, 44, 0.7);
+@green: #26b929;
+@greenHover:rgba(38, 185, 41, 0.7);
+@blueHover:rgba(3, 150, 234, 0.7);
+
+.mainPage{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    .titleContainer{
+        width: 100%;
+        height: @titleContainer_height;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        // background-color: blue;
+        .exchangeSelect{
+          display: flex;
+          align-items: center;
+          padding-left: @default_padding;
+          .addbtn{
+            margin-left: 10px;
+            width: @default_lineheight;
+            height: @default_lineheight;
+          }
+        }
+        .accountLogin{
+          position: absolute;
+          right: @default_padding;
+        }
+    }
+    .bodyContainer{
+        width: 100%;
+        display: flex;
+        flex: 1;
+        .leftContainer{
+            height: 100%;
+            width: @leftContainer_width;
+            display: flex;
+            flex-direction: column;
+        }
+        .rightContainer{
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            height: 100%;
+            .marketDataContainer{
+                width: 100%;
+                height: @marketDataContainer_height;
+                overflow-y: auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                border: @default_border;
+                // background-color: rgb(55, 160, 55);
+            }
+            .tradeContainer{
+                width: 100%;
+                flex: 1;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                border: @default_border;
+                // background-color: rgb(160, 55, 120);
+                .tradeContainerBuy{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: center;
+                    flex: 1;
+                }
+                .tradeContainerSell{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: center;
+                    flex: 1;
+                }
+            }
+        }
+    }
+}
+
+.defaultTitle{
+    width: 100%;
+    height: @default_lineheight;
+    min-height: @default_lineheight;
+    background-color: @title_color;
+    display: flex;
+    align-items: center;
+    padding-left: @default_padding;
+    box-sizing: border-box;
+    z-index: 9999;
+}
+
+.inputArea{
+    display: flex;
+    flex-direction: column;
+    min-height: 50px;
+    margin-top: @default_lineheight;
+    width: 80%;
+    min-width: 200px;
+}
+.inputTextDiv{
+    // display: flex;
+    // justify-content: space-around;
+    // align-items: center;
+    width: 100%;
+    min-width: 200px;
+    border: @default_border;
+    background-color: @color2;
+    height: @default_lineheight;
+    min-height: @default_lineheight;
+    border-radius: 5px;
+    margin-top: 5px;
+    color: white;
+    padding-left: @default_padding;
+    // padding-right: @default_padding;
+    box-sizing: border-box;
+    outline:none;
+}
+.inputText{
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    width: 90%;
+    height: @default_lineheight;
+    min-height: @default_lineheight;
+    outline:none;
+    color: white;
+}
+.inputSymbol{
+    width: 10%;
+    height: @default_lineheight;
+    min-height: @default_lineheight;
+    text-align: center;
+    font-size: 18px;
+    color: #666e7e;
+}
+.inputBtn{
+    width: 100%;
+    min-width: 200px;
+    height: @default_lineheight;
+    min-height: @default_lineheight;
+    background-color: @tableItemDarkColor;
+    // border: @default_border;
+    border-radius: 5px;
+    border: 0;
+    color: white;
+    outline:none;
+}
+.inputBtn:active{
+    background-color: @tableItemLightColor;
+}
+
+.tradeTypeSelect{
+    color: #1788b4;
+    border-bottom: solid 3px #1788b4;
+}
+.tradeType{
+    font-size: 15px;
+    height: 100%;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hiddeStyle{
+    display: none;
+}
+
+
+.sambolCheckBackground{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(31, 56, 70, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .sambolCheck{
+        // position: absolute;
+        width: 300px;
+        height: 500px;
+        background-color: @tableItemLightColor;
+        z-index: 99999;
+        .sambolCheckTitle{
+            width: 100%;
+            height: @default_lineheight;
+            display: flex;
+            justify-content: flex-start;
+            margin-left: @default_padding;
+            align-items: center;
+        }
+        .sambolCheckContainer{
+            width: 100%;
+            height: 90%;
+            overflow-y: auto;
+            .sambolCheckContainerItem{
+                width: 100%;
+                height: @default_lineheight;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+            .sambolCheckContainerItem:hover{
+                background-color: #10699c;
+            }
+        }
+    }
+}
+
+.red{
+    color: @red;
+    // background-color: @red;
+}
+.green{
+    color: @green;
+    // background-color: @green;
+}
+.normal{
+    color: white;
+    // background-color: rgba(0, 0, 0, 0)
+}

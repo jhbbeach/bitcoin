@@ -1,0 +1,212 @@
+@menuPage:#181c26;//项目整体背景色
+@fontFamily:"Helvetica Neue", Helvetica, Arial, sans-serif !important;//项目统一字体
+@fontSize:12px;//项目统一字体大小
+@fontColor:#f9f9f9;//统一字体颜色
+@tableItemLineHeight: 25px;//table行高
+@tableItemDarkColor: #1d2934;//table深色行颜色
+@tableItemLightColor: #242f40;//table浅色行颜色
+@tableItemHoverColor: #2a3e5e;//table鼠标hover颜色
+@length20:20px;//尺寸20
+@length25:25px;//尺寸25
+@length100:100px;//尺寸100
+@btnBackColor:#42526c;//普通按钮背景色
+@odrBtnBackColor:#993d3d;//下单按钮背景色
+@btnHover:#0396ea;//按钮hover颜色
+@btnCancel:#525c6e;//取消按钮背景色
+@btnBorder:#212a3a;//按钮边框颜色
+@btnBorderAlert:#20242c;//alert弹框按钮边框颜色
+@btnWidth50:50px;//按钮宽度50px
+@btnWidth60:60px;//按钮宽度60px
+@btnHeight24:24px;//按钮高度24px
+@btnWidth40:40px;//按钮宽度40px
+@btnHeight20:20px;//按钮高度20px
+@alertBgColor:#344056;//窗口内弹出框背景色
+@outLine:none;//按钮边框
+@inputHeight:20px;
+@red: #f51e2c;
+@redHover: rgba(245, 30, 44, 0.7);
+@green: #26b929;
+@greenHover:rgba(38, 185, 41, 0.7);
+@blueHover:rgba(3, 150, 234, 0.7);
+@smallFontSize:12px;
+@middleFontSize:13px;
+@bigFontSize:14px;
+@lineColor:#161a22;
+@alertInputWidth: 98px;
+@titleLineColor:#1b222f;
+@boderColor:black;
+@lineHeight:30px;
+//公共背景色
+.pubBackColor{
+  background-color: @menuPage;
+}
+//公共字体样式
+.pubFont{
+  font-family: @fontFamily;
+  font-size: @fontSize;
+  color: @fontColor;
+}
+//宽度为60,高度为20的圆角按钮样式
+.btnW60H20{
+  width:@btnWidth60;
+  height:@btnHeight20;
+  background-color:@odrBtnBackColor;
+  border:1px solid @btnBorderAlert;
+  text-align: center;
+  line-height: @btnHeight20;
+  font-family: @fontFamily;
+  font-size: @fontSize;
+  color: @fontColor;
+  outline:@outLine;
+  border-radius: 5px;
+}
+.btnW60H20:hover{
+  background-color: @btnHover;
+  cursor: pointer;
+}
+//宽度为60,高度为20的取消按钮样式
+.cancelBtnW60H20{
+  width:@btnWidth60;
+  height:@btnHeight20;
+  background-color:@btnCancel;
+  border:1px solid @btnBorderAlert;
+  text-align: center;
+  line-height: @btnHeight20;
+  font-family: @fontFamily;
+  font-size: @fontSize;
+  color: @fontColor;
+  outline:@outLine;
+  border-radius: 5px;
+}
+.cancelBtnW60H20:hover{
+  background-color: @btnHover;
+  cursor: pointer;
+}
+//宽度为50,高度为24的普通按钮样式
+.btnW50H24{
+  width:@btnWidth50;
+  height:@btnHeight24;
+  background-color:@btnBackColor;
+  border:1px solid @btnBorder;
+  text-align: center;
+  line-height: @btnHeight24;
+  font-family: @fontFamily;
+  font-size: @fontSize;
+  color: @fontColor;
+  outline:@outLine;
+}
+.btnW50H24:hover{
+  background-color: @btnHover;
+  cursor: pointer;
+}
+//宽度为50,高度为24的取消按钮样式
+.cancelBtnW50H24{
+  width:@btnWidth50;
+  height:@btnHeight24;
+  background-color:@btnCancel;
+  border:1px solid @btnBorder;
+  text-align: center;
+  line-height: @btnHeight24;
+  font-family: @fontFamily;
+  font-size: @fontSize;
+  color: @fontColor;
+  outline:@outLine;
+}
+.cancelBtnW50H24:hover{
+  background-color: @btnHover;
+  cursor: pointer;
+}
+//宽度为40,高度为20的普通按钮样式
+.btnW40H20{
+  border-radius: 5px;
+  width:@btnWidth40;
+  height:@btnHeight20;
+  background-color:@btnBackColor;
+  border:1px solid @btnBorderAlert;
+  text-align: center;
+  line-height: @btnHeight20;
+  font-family: @fontFamily;
+  font-size: @fontSize;
+  color: @fontColor;
+  outline:@outLine;
+}
+.btnW40H20:hover{
+  background-color: @btnHover;
+  cursor: pointer;
+}
+//宽度为40,高度为20的取消按钮样式
+.cancelBtnW40H20{
+  border-radius: 5px;
+  width:@btnWidth40;
+  height:@btnHeight20;
+  background-color:@btnCancel;
+  border:1px solid @btnBorderAlert;
+  text-align: center;
+  line-height: @btnHeight20;
+  font-family: @fontFamily;
+  font-size: @fontSize;
+  color: @fontColor;
+  outline:@outLine;
+}
+.cancelBtnW40H20:hover{
+  background-color: @btnHover;
+  cursor: pointer;
+}
+//下拉列表样式
+.optionDiv{
+  width:@length100;
+  height:@length25;
+  line-height:@length25;
+  padding-left: 5px;
+  background-color: @tableItemLightColor;
+}
+.optionDiv:hover{
+  background-color: @tableItemHoverColor;
+}
+//公共输入框样式
+.pubInputText{
+  border:solid 1px #161a22;
+  background-color: #2c313a;
+  color:@fontColor;
+  outline:@outLine;
+  box-sizing:border-box;
+  height:@inputHeight;
+}
+//公共输入框样式,选中时样式
+.pubInputTextFocus{
+  border:solid 1px #216cdb;
+  background-color: #181c26;
+}
+
+.pubShowErrorDiv{
+  display: flex;
+  z-index: 999;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 25px;
+  top: 25px;
+  color: #A36E13;
+  font-size: 14px;
+  background-color: #FFF0C0;
+}
+
+.button{
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+}
+
+.button:hover{
+  // background-color:#1D73A5;
+  opacity: 0.7;
+}
+
+.button:active{
+  // background-color:#07A4F6;
+  opacity: 1;
+}
